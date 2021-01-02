@@ -1,4 +1,17 @@
 /*
+    Global
+*/
+
+.btn-default {
+    background-color: #92e4dd;
+    border-color: #92e4dd;
+}
+
+a {
+    color: #11731c;
+}
+
+/*
     Header & Navigation bar
 */
 
@@ -41,14 +54,12 @@ body > #header .header-bar {
     Notebook & Text editor
 */
 
-@media not print {
-    .notebook_app #notebook {
-        background: #0A0A07;
-    }
-    .notebook_app #notebook-container,
-    .edit_app #texteditor-backdrop {
-        background: #0A0A07;
-    }
+.notebook_app #notebook {
+    background: #0A0A07;
+}
+.notebook_app #notebook-container,
+.edit_app #texteditor-backdrop {
+    background: #0A0A07;
 }
 
 div.input_area {
@@ -70,20 +81,22 @@ div.cell.selected, div.cell.selected.jupyter-soft-selected {
 }
 
 div.output_wrapper {
- background-color: white;
- border: 0px;
- left: 0px;
- margin-bottom: 0em;
- margin-top: 0em;
- border-top-right-radius: 0px;
- border-top-left-radius: 0px;
+    background-color: white;
 }
 
 div.CodeMirror,
 div.CodeMirror pre {
- color: #92e4dd;
+    color: #92e4dd;
 }
 
+.modal-dialog .modal-content,
+.popover,
+.popover .popover-title {
+    background: white;
+    color: black;
+}
+
+/* Line number */
 #texteditor-backdrop #texteditor-container .CodeMirror-gutter,
 .CodeMirror-gutters {
     background: #0A0A07;
@@ -92,9 +105,12 @@ div.CodeMirror pre {
 }
 
 .CodeMirror span.cm-variable {
-  color: #92e4dd;
+    color: #92e4dd;
 }
 
+.CodeMirror span.cm-def {
+    color: #c4b643;
+}
 
 /*
     Notebook explorer
@@ -106,8 +122,8 @@ body[data-notebook-path] {
 }
 
 div#notebook_list_header.row.list_header {
- color: #92e4dd;
- background-color: transparent;
+    color: #92e4dd;
+    background-color: transparent;
 }
 
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
@@ -120,13 +136,16 @@ div#notebook_list_header.row.list_header {
 .list_container {
     border: 1px solid #92e4dd;
 }
+.list_container>div {
+    border-bottom-color: #92e4dd;
+}
 
 span#login_widget > .button, #logout, #shutdown {
     background-color: #92e4dd;
     border-color: #92e4dd;
 }
 
-.btn-default {
-    background-color: #92e4dd;
-    border-color: #92e4dd;
+.list_item:hover {
+    background-color: #c4b643;
+    color: #0A0A07;
 }
