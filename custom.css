@@ -122,7 +122,9 @@ div.CodeMirror pre {
 .CodeMirror span.cm-variable-2 {
     color: #ec2aee;
 }
-
+.CodeMirror-cursor {
+ border-left: 2px solid #ffffff !important;
+}
 
 
 /*
