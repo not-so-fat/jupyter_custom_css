@@ -79,6 +79,9 @@ div.cell.selected, div.cell.selected.jupyter-soft-selected {
     background: #c4b643;
     border: medium solid #92e4dd;
 }
+div.text_cell_render  {
+    color: #92e4dd;
+}
 
 div.output_wrapper {
     background-color: white;
@@ -123,9 +126,8 @@ div.CodeMirror pre {
     color: #ec2aee;
 }
 .CodeMirror-cursor {
- border-left: 2px solid #ffffff !important;
+ border-left: 3px solid #aaaaaa !important;
 }
-
 
 /*
     Notebook explorer
