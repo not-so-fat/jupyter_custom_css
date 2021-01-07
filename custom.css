@@ -82,11 +82,6 @@ div.cell.selected, div.cell.selected.jupyter-soft-selected {
 div.text_cell_render  {
     color: #92e4dd;
 }
-
-div.output_wrapper {
-    background-color: white;
-}
-
 div.CodeMirror,
 div.CodeMirror pre {
     color: #92e4dd;
@@ -97,6 +92,31 @@ div.CodeMirror pre {
 .popover .popover-title {
     background: white;
     color: black;
+}
+.cm-s-default .cm-header {
+    color: #c4b643;
+}
+.cm-s-default .cm-link {
+    color: #F56674;
+}
+hr {
+ border-top: 1px solid #92e4dd;
+}
+.rendered_html thead {
+    background: #333333;
+    color: #ffffff;
+}
+.rendered_html tbody tr:nth-child(odd) {
+    background: #ffffff;
+}
+.rendered_html tbody tr {
+    background: #dddddd;
+}
+.rendered_html tbody tr:hover {
+    background: #c4b643;
+}
+div.output_wrapper {
+    background-color: white;
 }
 
 /* Line number */
