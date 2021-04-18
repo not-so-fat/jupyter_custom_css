@@ -1,92 +1,113 @@
-/*
-    Global
-*/
+:root {
+    --lightblue: #92E4DD;
+    --bgc_dk1: #0A0A07;
+    --bgc_dk2: #03313B;
+    --green: #11731C;
+    --yellow: #C4B643;
+    --blue: #02A4D3;
+}
+
+
+/* Set Jupyter parts color (text, borders, buttons) */
 
 .btn-default {
-    background-color: #92e4dd;
-    border-color: #92e4dd;
+    background-color: var(--lightblue);
+    border-color: var(--lightblue);
 }
-
-a {
-    color: #11731c;
-}
-
-/*
-    Header & Navigation bar
-*/
-
-
-
-body > #header {
-    background: #0A0A07;
-}
-
 body > #header .header-bar {
-    background: #92e4dd;
+    background: var(--lightblue);
 }
-
-#ipython_notebook img{
-    display:none;
+hr {
+ border-top: 1px solid var(--lightblue);
 }
-
 .notebook_app>#header,
 .edit_app>#header {
-    color: #92e4dd;
+    color: var(--lightblue);
 }
-
-.navbar-default {
-    background: none;
-    border: none;
-}
-
 .navbar-default .navbar-nav > li > a, #kernel_indicator {
-    color: #92e4dd;
+    color: var(--lightblue);
     transition: all 0.25s;
 }
-
 .navbar-default .navbar-nav > li > a:hover, #kernel_indicator:hover {
     border-bottom: 2px solid #fff;
-    color: #92e4dd;
+    color: var(--lightblue);
 }
-
-
-/*
-    Notebook & Text editor
-*/
-
-.notebook_app #notebook {
-    background: #0A0A07;
-}
-.notebook_app #notebook-container,
-.edit_app #texteditor-backdrop {
-    background: #0A0A07;
-}
-
 div.input_area {
-    background: #03313b;
-    border: 1px solid #92e4dd;
-}
-div.input_prompt {
-    color: #11731c
-}
-div.cell.selected.before, div.cell.selected.jupyter-soft-selected.before {
-    background: #11731c;
-}
-div.cell.selected, div.cell.selected.jupyter-soft-selected {
-    border: medium solid #92e4dd;
-}
-.edit_mode div.cell.selected, div.cell.selected.jupyter-soft-selected{
-    background: #c4b643;
-    border: medium solid #92e4dd;
-}
-div.text_cell_render  {
-    color: #92e4dd;
+    border: 1px solid var(--lightblue);
 }
 div.CodeMirror,
 div.CodeMirror pre {
-    color: #92e4dd;
+    color: var(--lightblue);
+}
+div.text_cell_render  {
+    color: var(--lightblue);
+}
+body[data-notebook-path] {
+    color: var(--lightblue);
+}
+div#notebook_list_header.row.list_header {
+    color: var(--lightblue);
+    background-color: transparent;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    background-color: var(--lightblue);
+    border-color: var(--lightblue);
+}
+.nav-tabs {
+    border-bottom: 1px solid var(--lightblue);
+}
+.list_container {
+    border: 1px solid var(--lightblue);
+}
+.list_container>div {
+    border-bottom-color: var(--lightblue);
+}
+span#login_widget > .button, #logout, #shutdown {
+    background-color: var(--lightblue);
+    border-color: var(--lightblue);
 }
 
+
+/* Set BG color */
+
+body > #header {
+    background: var(--bgc_dk1);
+}
+body[data-notebook-path] {
+    background-color: var(--bgc_dk1);
+}
+div.input_area {
+    background: var(--bgc_dk2);
+}
+.notebook_app #notebook {
+    background: var(--bgc_dk1);
+}
+.notebook_app #notebook-container,
+.edit_app #texteditor-backdrop {
+    background: var(--bgc_dk1);
+}
+
+/* Notebook command mode vs edit mode */
+
+
+div.input_prompt {
+    color: var(--green)
+}
+div.cell.selected.before, div.cell.selected.jupyter-soft-selected.before {
+    background: var(--green);
+}
+div.cell.selected, div.cell.selected.jupyter-soft-selected {
+    border: medium solid var(--lightblue);
+}
+.edit_mode div.cell.selected, div.cell.selected.jupyter-soft-selected{
+    background: var(--yellow);
+    border: medium solid var(--lightblue);
+}
+.rendered_html tbody tr:hover {
+    background: var(--yellow);
+}
+
+/* Notebook output */
 .modal-dialog .modal-content,
 .popover,
 .popover .popover-title {
@@ -94,13 +115,10 @@ div.CodeMirror pre {
     color: black;
 }
 .cm-s-default .cm-header {
-    color: #c4b643;
+    color: var(--yellow);
 }
 .cm-s-default .cm-link {
     color: #F56674;
-}
-hr {
- border-top: 1px solid #92e4dd;
 }
 .rendered_html thead {
     background: #333333;
@@ -112,9 +130,6 @@ hr {
 .rendered_html tbody tr {
     background: #dddddd;
 }
-.rendered_html tbody tr:hover {
-    background: #c4b643;
-}
 div.output_wrapper {
     background-color: white;
 }
@@ -122,16 +137,17 @@ div.output_wrapper {
 /* Line number */
 #texteditor-backdrop #texteditor-container .CodeMirror-gutter,
 .CodeMirror-gutters {
-    background: #0A0A07;
+    background: var(--bgc_dk1);
     border-right: 0px;
-    color: #11731c;
+    color: var(--green);
 }
 
+/* Coding color */
 .CodeMirror span.cm-variable {
-    color: #92e4dd;
+    color: var(--lightblue);
 }
 .CodeMirror span.cm-def {
-    color: #c4b643;
+    color: var(--yellow);
 }
 .CodeMirror span.cm-builtin, .CodeMirror span.cm-keyword, .CodeMirror span.cm-operator {
     color: #30c34c;
@@ -149,40 +165,30 @@ div.output_wrapper {
  border-left: 3px solid #aaaaaa !important;
 }
 
-/*
-    Notebook explorer
-*/
-
-body[data-notebook-path] {
-    background-color: #0A0A07;
-    color: #92e4dd;
-}
-
-div#notebook_list_header.row.list_header {
-    color: #92e4dd;
-    background-color: transparent;
-}
-
-.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-    background-color: #92e4dd;
-    border-color: #92e4dd;
-}
-.nav-tabs {
-    border-bottom: 1px solid #92e4dd;
-}
-.list_container {
-    border: 1px solid #92e4dd;
-}
-.list_container>div {
-    border-bottom-color: #92e4dd;
-}
-
-span#login_widget > .button, #logout, #shutdown {
-    background-color: #92e4dd;
-    border-color: #92e4dd;
-}
+/* Notebook explorer hover behavior*/
 
 .list_item:hover {
-    background-color: #c4b643;
-    color: #0A0A07;
+    background-color: var(--yellow);
+    color: var(--bgc_dk1);
+}
+
+/* Set color of filename in explorer*/
+a {
+    color: var(--blue);
+}
+.running_notebook_icon:before {
+    color: var(--blue);
+}
+.running_notebook_icon:hover {
+    color: var(--blue);
+}
+
+/* remove unnecessary parts */
+
+#ipython_notebook img{
+    display:none;
+}
+.navbar-default {
+    background: none;
+    border: none;
 }
